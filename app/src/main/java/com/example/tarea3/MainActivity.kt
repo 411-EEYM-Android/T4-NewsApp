@@ -47,7 +47,6 @@ fun NewsScreen() {
             .padding(16.dp)
             .verticalScroll(scrollState)
     ) {
-        // 1. Buscador
         OutlinedTextField(
             value = "",
             onValueChange = {},
@@ -61,7 +60,6 @@ fun NewsScreen() {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        // 2. Tabs
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
@@ -73,7 +71,6 @@ fun NewsScreen() {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        // 3. Últimas Noticias (Carrusel)
         Text("Ultimas noticias", fontWeight = FontWeight.Bold, fontSize = 22.sp)
         Spacer(modifier = Modifier.height(10.dp))
 
@@ -86,12 +83,9 @@ fun NewsScreen() {
         }
 
         Spacer(modifier = Modifier.height(30.dp))
-
-        // 4. Alrededor del mundo (Grid)
         Text("Alrededor del mundo", fontWeight = FontWeight.Bold, fontSize = 22.sp)
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Usamos una altura fija para el Grid dentro del scroll vertical
         Box(modifier = Modifier.height(600.dp)) {
             LazyVerticalGrid(
                 columns = GridCells.Fixed(2),
